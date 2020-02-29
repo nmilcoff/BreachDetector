@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BreachDetector", "BreachDetector\BreachDetector.csproj", "{F977F473-7752-4D11-82B8-D416DCD5FBB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BreachDetector", "BreachDetector\BreachDetector.csproj", "{F977F473-7752-4D11-82B8-D416DCD5FBB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RootBeer", "RootBeer\RootBeer.csproj", "{FADA79B2-552F-40FA-9BCF-90CE6FF0E046}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F977F473-7752-4D11-82B8-D416DCD5FBB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F977F473-7752-4D11-82B8-D416DCD5FBB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F977F473-7752-4D11-82B8-D416DCD5FBB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FADA79B2-552F-40FA-9BCF-90CE6FF0E046}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FADA79B2-552F-40FA-9BCF-90CE6FF0E046}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FADA79B2-552F-40FA-9BCF-90CE6FF0E046}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FADA79B2-552F-40FA-9BCF-90CE6FF0E046}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

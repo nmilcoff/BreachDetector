@@ -6,5 +6,6 @@ namespace Plugin.BreachDetector
 {
     public interface IBreachDetector
     {
+        bool? IsRooted();
     }
 }
