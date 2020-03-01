@@ -15,6 +15,7 @@ namespace Plugin.BreachDetector
             return Securing.IOSSecuritySuiteProxy.AmIDebugged() || System.Diagnostics.Debugger.IsAttached;
         }
 
+        // https://gist.github.com/steipete/7668246
         public bool? InstalledFromStore()
         {
             try
