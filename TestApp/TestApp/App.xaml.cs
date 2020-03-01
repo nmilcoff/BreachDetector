@@ -1,7 +1,5 @@
 ﻿using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using TestApp.Services;
+using Xamarin.Forms; 
 using TestApp.Views;
 
 namespace TestApp
@@ -13,8 +11,7 @@ namespace TestApp
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
-            MainPage = new MainPage();
+            MainPage = new ChecksPage();
         }
 
         protected override void OnStart()

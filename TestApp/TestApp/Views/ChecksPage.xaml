@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TestApp.Views.ChecksPage"
+             Title="{Binding Title}"
+             x:Name="BrowseItemsPage">
+ 
+    <Grid
+        HorizontalOptions="CenterAndExpand"
+        VerticalOptions="CenterAndExpand"
+        Margin="20">
+        <Label Grid.Row="0" Grid.Column="0"
+            Text="Root:" 
+            LineBreakMode="NoWrap" 
+            Style="{DynamicResource ListItemTextStyle}" 
+            FontSize="16" />
+        <Label Grid.Row="0" Grid.Column="1"
+            Text="{Binding Root}" 
+            LineBreakMode="NoWrap" 
+            Style="{DynamicResource ListItemTextStyle}" 
+            FontSize="16" />
+
+        <Label Grid.Row="1" Grid.Column="0"
+            Text="Virtual Device:" 
+            LineBreakMode="NoWrap" 
+            Style="{DynamicResource ListItemTextStyle}" 
+            FontSize="16" />
+        <Label Grid.Row="1" Grid.Column="1"
+            Text="{Binding VirtualDevice}" 
+            LineBreakMode="NoWrap" 
+            Style="{DynamicResource ListItemTextStyle}" 
+            FontSize="16" />
+
+        <Label Grid.Row="2" Grid.Column="0"
+            Text="Debug:" 
+            LineBreakMode="NoWrap" 
+            Style="{DynamicResource ListItemTextStyle}" 
+            FontSize="16" />
+        <Label Grid.Row="2" Grid.Column="1"
+            Text="{Binding Debug}" 
+            LineBreakMode="NoWrap" 
+            Style="{DynamicResource ListItemTextStyle}" 
+            FontSize="16" />
+
+        <Label Grid.Row="3" Grid.Column="0"
+            Text="Store:" 
+            LineBreakMode="NoWrap" 
+            Style="{DynamicResource ListItemTextStyle}" 
+            FontSize="16" />
+        <Label Grid.Row="3" Grid.Column="1"
+            Text="{Binding Store}" 
+            LineBreakMode="NoWrap" 
+            Style="{DynamicResource ListItemTextStyle}" 
+            FontSize="16" />
+    </Grid>
+
+</ContentPage>
