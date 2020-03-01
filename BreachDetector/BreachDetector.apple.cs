@@ -13,5 +13,10 @@ namespace Plugin.BreachDetector
         {
             return Securing.IOSSecuritySuiteProxy.AmIJailbroken();
         }
+
+        public bool? IsRunningOnVirtualDevice()
+        {
+            return Securing.IOSSecuritySuiteProxy.AmIRunInEmulator();
+        }
     }
 }

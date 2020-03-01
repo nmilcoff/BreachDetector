@@ -13,5 +13,10 @@ namespace Plugin.BreachDetector
         {
             return null;
         }
+
+        public bool? IsRunningOnVirtualDevice()
+        {
+            return null;
+        }
     }
 }

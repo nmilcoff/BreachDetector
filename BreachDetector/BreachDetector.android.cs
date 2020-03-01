@@ -17,5 +17,10 @@ namespace Plugin.BreachDetector
             
             return rootBeer.IsRooted;
         }
+
+        public bool? IsRunningOnVirtualDevice()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
