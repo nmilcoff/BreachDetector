@@ -24,5 +24,12 @@ namespace Plugin.BreachDetector
         /// </summary>
         /// <returns>True if being debugged, false otherwise</returns>
         bool? InDebugMode();
+
+        /// <summary>
+        /// For Android, check if installed from Google Play, Amazon App Store or Samsung Galaxy Apps
+        /// For iOS, check if installed from App Store
+        /// </summary>
+        /// <returns>True if installed from an official App Store, false otherwise</returns>
+        bool? InstalledFromStore();
     }
 }

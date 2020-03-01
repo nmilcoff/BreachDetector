@@ -1,4 +1,5 @@
-﻿using Android.App;
+﻿using System.Linq;
+using Android.App;
 using Android.Content.PM;
 using Android.OS;
 using Com.Scottyab.Rootbeer;
@@ -10,11 +11,26 @@ namespace Plugin.BreachDetector
     /// </summary>
     public class BreachDetectorImplementation : IBreachDetector
     {
+        private readonly string[] _stores =
+        {
+            "com.android.vending",
+            "com.google.android.feedback",
+            "com.amazon.venezia",
+            "com.sec.android.app.samsungapps"
+        };
+
         public bool? InDebugMode()
         {
             return Application.Context.ApplicationInfo.Flags.HasFlag(ApplicationInfoFlags.Debuggable)
                 || System.Diagnostics.Debugger.IsAttached
                 || Debug.IsDebuggerConnected;
+        }
+
+        public bool? InstalledFromStore()
+        {
+            var installer = Application.Context.PackageManager.GetInstallerPackageName(Application.Context.PackageName);
+
+            return !string.IsNullOrEmpty(installer) && _stores.Contains(installer);
         }
 
         public bool? IsRooted()

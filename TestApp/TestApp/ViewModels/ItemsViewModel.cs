@@ -35,8 +35,10 @@ namespace TestApp.ViewModels
             if (IsBusy)
                 return;
 
-            var asd = CrossBreachDetector.Current.IsRooted();
-            var q = CrossBreachDetector.Current.IsRunningOnVirtualDevice();
+            var root = CrossBreachDetector.Current.IsRooted();
+            var virtualDevice = CrossBreachDetector.Current.IsRunningOnVirtualDevice();
+            var debug = CrossBreachDetector.Current.InDebugMode();
+            var store = CrossBreachDetector.Current.InstalledFromStore();
 
             IsBusy = true;
 

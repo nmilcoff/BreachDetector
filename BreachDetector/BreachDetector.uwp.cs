@@ -23,5 +23,10 @@ namespace Plugin.BreachDetector
         {
             throw new NotImplementedException();
         }
+
+        public bool? InstalledFromStore()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
