@@ -15,7 +15,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
@@ -91,7 +90,7 @@
       <Name>BreachDetector</Name>
     </ProjectReference>
     <ProjectReference Include="..\TestApp\TestApp.csproj">
-      <Project>{895B6E41-851A-4C58-AEE6-29F1DB098C1F}</Project>
+      <Project>{B574DE4B-B8D8-4191-8528-EF9C8AD80685}</Project>
       <Name>TestApp</Name>
     </ProjectReference>
   </ItemGroup>
