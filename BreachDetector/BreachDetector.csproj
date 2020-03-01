@@ -84,6 +84,7 @@
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
     <Compile Include="**\*.apple.cs" />
+    <ProjectReference Include="..\IOSSecuritySuite\IOSSecuritySuite.csproj" />
   </ItemGroup>
  
   <!--Additional item groups-->

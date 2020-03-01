@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BreachDetector", "BreachDet
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RootBeer", "RootBeer\RootBeer.csproj", "{FADA79B2-552F-40FA-9BCF-90CE6FF0E046}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOSSecuritySuite", "IOSSecuritySuite\IOSSecuritySuite.csproj", "{883E9DAA-63F6-479A-B3D2-3E067D4F7D40}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FADA79B2-552F-40FA-9BCF-90CE6FF0E046}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FADA79B2-552F-40FA-9BCF-90CE6FF0E046}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FADA79B2-552F-40FA-9BCF-90CE6FF0E046}.Release|Any CPU.Build.0 = Release|Any CPU
+		{883E9DAA-63F6-479A-B3D2-3E067D4F7D40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{883E9DAA-63F6-479A-B3D2-3E067D4F7D40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{883E9DAA-63F6-479A-B3D2-3E067D4F7D40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{883E9DAA-63F6-479A-B3D2-3E067D4F7D40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

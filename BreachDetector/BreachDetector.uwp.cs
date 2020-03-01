@@ -9,5 +9,9 @@ namespace Plugin.BreachDetector
     /// </summary>
     public class BreachDetectorImplementation : IBreachDetector
     {
+        public bool? IsRooted()
+        {
+            return null;
+        }
     }
 }

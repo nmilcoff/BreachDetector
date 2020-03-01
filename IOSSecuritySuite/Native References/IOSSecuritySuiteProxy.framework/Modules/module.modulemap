@@ -1,0 +1,11 @@
+framework module IOSSecuritySuiteProxy {
+  umbrella header "IOSSecuritySuiteProxy.h"
+
+  export *
+  module * { export * }
+}
+
+module IOSSecuritySuiteProxy.Swift {
+    header "IOSSecuritySuiteProxy-Swift.h"
+    requires objc
+}
