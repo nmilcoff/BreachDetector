@@ -79,12 +79,12 @@
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
     <Compile Include="**\*.android.cs" />
-    <ProjectReference Include="..\RootBeer\RootBeer.csproj" />
+    <ProjectReference Include="..\BindingLibraries\RootBeer\RootBeer.csproj" />
   </ItemGroup>
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
     <Compile Include="**\*.apple.cs" />
-    <ProjectReference Include="..\IOSSecuritySuite\IOSSecuritySuite.csproj" />
+    <ProjectReference Include="..\BindingLibraries\IOSSecuritySuite\IOSSecuritySuite.csproj" />
   </ItemGroup>
  
   <!--Additional item groups-->

@@ -9,9 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BreachDetector", "BreachDet
 		{FADA79B2-552F-40FA-9BCF-90CE6FF0E046} = {FADA79B2-552F-40FA-9BCF-90CE6FF0E046}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RootBeer", "RootBeer\RootBeer.csproj", "{FADA79B2-552F-40FA-9BCF-90CE6FF0E046}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RootBeer", "BindingLibraries\RootBeer\RootBeer.csproj", "{FADA79B2-552F-40FA-9BCF-90CE6FF0E046}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOSSecuritySuite", "IOSSecuritySuite\IOSSecuritySuite.csproj", "{883E9DAA-63F6-479A-B3D2-3E067D4F7D40}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOSSecuritySuite", "BindingLibraries\IOSSecuritySuite\IOSSecuritySuite.csproj", "{883E9DAA-63F6-479A-B3D2-3E067D4F7D40}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{F0534595-FE95-4653-9B05-C7E2E8FE6C22}"
 EndProject
