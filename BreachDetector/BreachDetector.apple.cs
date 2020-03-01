@@ -9,6 +9,11 @@ namespace Plugin.BreachDetector
     /// </summary>
     public class BreachDetectorImplementation : IBreachDetector
     {
+        public bool? InDebugMode()
+        {
+            return Securing.IOSSecuritySuiteProxy.AmIDebugged() || System.Diagnostics.Debugger.IsAttached;
+        }
+
         public bool? IsRooted()
         {
             return Securing.IOSSecuritySuiteProxy.AmIJailbroken();

@@ -1,4 +1,5 @@
 ﻿using Android.App;
+using Android.Content.PM;
 using Android.OS;
 using Com.Scottyab.Rootbeer;
 
@@ -9,6 +10,13 @@ namespace Plugin.BreachDetector
     /// </summary>
     public class BreachDetectorImplementation : IBreachDetector
     {
+        public bool? InDebugMode()
+        {
+            return Application.Context.ApplicationInfo.Flags.HasFlag(ApplicationInfoFlags.Debuggable)
+                || System.Diagnostics.Debugger.IsAttached
+                || Debug.IsDebuggerConnected;
+        }
+
         public bool? IsRooted()
         {
             RootBeer rootBeer = new RootBeer(Application.Context);

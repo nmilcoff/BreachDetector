@@ -11,12 +11,17 @@ namespace Plugin.BreachDetector
     {
         public bool? IsRooted()
         {
-            return null;
+            throw new NotImplementedException();
         }
 
         public bool? IsRunningOnVirtualDevice()
         {
-            return null;
+            throw new NotImplementedException();
+        }
+
+        public bool? InDebugMode()
+        {
+            throw new NotImplementedException();
         }
     }
 }
