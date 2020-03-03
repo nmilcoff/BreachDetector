@@ -12,7 +12,7 @@ namespace Plugin.BreachDetector
     {
         public bool? InDebugMode()
         {
-            return Securing.IOSSecuritySuiteProxy.AmIDebugged() || System.Diagnostics.Debugger.IsAttached;
+            return Securing.IOSSecuritySuite.AmIDebugged() || System.Diagnostics.Debugger.IsAttached;
         }
 
         // https://gist.github.com/steipete/7668246
@@ -36,12 +36,12 @@ namespace Plugin.BreachDetector
 
         public bool? IsRooted()
         {
-            return Securing.IOSSecuritySuiteProxy.AmIJailbroken();
+            return Securing.IOSSecuritySuite.AmIJailbroken();
         }
 
         public bool? IsRunningOnVirtualDevice()
         {
-            return Securing.IOSSecuritySuiteProxy.AmIRunInEmulator();
+            return Securing.IOSSecuritySuite.AmIRunInEmulator();
         }
     }
 }

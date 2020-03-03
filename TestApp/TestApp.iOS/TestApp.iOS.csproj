@@ -140,13 +140,13 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\..\BreachDetector\BreachDetector.csproj">
-      <Project>{f977f473-7752-4d11-82b8-d416dcd5fbb9}</Project>
-      <Name>BreachDetector</Name>
-    </ProjectReference>
     <ProjectReference Include="..\TestApp\TestApp.csproj">
-      <Project>{895B6E41-851A-4C58-AEE6-29F1DB098C1F}</Project>
+      <Project>{B574DE4B-B8D8-4191-8528-EF9C8AD80685}</Project>
       <Name>TestApp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BreachDetector\BreachDetector.csproj">
+      <Project>{F977F473-7752-4D11-82B8-D416DCD5FBB9}</Project>
+      <Name>BreachDetector</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

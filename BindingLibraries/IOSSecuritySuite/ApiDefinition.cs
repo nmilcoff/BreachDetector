@@ -2,19 +2,14 @@
 
 namespace Securing
 {
-	// @interface IOSSecuritySuiteProxy : NSObject
-	[BaseType(typeof(NSObject))]
-	interface IOSSecuritySuiteProxy
+	// @interface IOSSecuritySuite : NSObject
+	[BaseType(typeof(NSObject), Name = "_TtC16IOSSecuritySuite16IOSSecuritySuite")]
+	interface IOSSecuritySuite
 	{
 		// +(BOOL)amIJailbroken __attribute__((warn_unused_result));
 		[Static]
 		[Export("amIJailbroken")]
 		bool AmIJailbroken();
-
-		// +(JailBreakResult * _Nonnull)amIJailbrokenWithFailMessage __attribute__((warn_unused_result));
-		[Static]
-		[Export("amIJailbrokenWithFailMessage")]
-		JailBreakResult AmIJailbrokenWithFailMessage();
 
 		// +(BOOL)amIRunInEmulator __attribute__((warn_unused_result));
 		[Static]
@@ -36,18 +31,4 @@ namespace Securing
 		[Export("amIReverseEngineered")]
 		bool AmIReverseEngineered();
 	}
-
-	// @interface JailBreakResult : NSObject
-	[BaseType(typeof(NSObject))]
-	[DisableDefaultCtor]
-	interface JailBreakResult
-	{
-		// @property (readonly, nonatomic) BOOL jailbroken;
-		[Export("jailbroken")]
-		bool Jailbroken { get; }
-
-		// @property (readonly, copy, nonatomic) NSString * _Nonnull failMessage;
-		[Export("failMessage")]
-		string FailMessage { get; }
-	}
-}
+} 

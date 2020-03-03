@@ -44,7 +44,7 @@
     <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
   </ItemGroup>
   <ItemGroup>
-    <NativeReference Include="Native References/IOSSecuritySuiteProxy.framework">
+    <NativeReference Include="..\iOS Swift Binding\Release-fat\IOSSecuritySuite.framework">
       <Kind>Framework</Kind>
     </NativeReference>
   </ItemGroup>
