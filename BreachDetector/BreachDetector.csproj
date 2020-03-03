@@ -30,9 +30,9 @@
     <DebugType>portable</DebugType>
     
     <!--TODO: Fill these in-->
-    <PackageLicenseUrl>LINK TO LICENSE</PackageLicenseUrl>
-    <PackageProjectUrl>LINK TO PROJECT</PackageProjectUrl>
-    <RepositoryUrl>LINK TO PROJECT</RepositoryUrl>
+    <PackageLicenseUrl>https://github.com/nmilcoff/BreachDetector/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/nmilcoff/BreachDetector</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/nmilcoff/BreachDetector</RepositoryUrl>
     <PackageReleaseNotes>RELEASE NOTES</PackageReleaseNotes>
     <PackageIconUrl>ICON URL</PackageIconUrl>
     <PackageTags>xamarin, windows, ios, android, xamarin.forms, plugin, BreachDetector</PackageTags>
@@ -42,9 +42,9 @@
     <Description>Plugin Description</Description>
     
     
-    <Owners>YOU</Owners>
-    <Authors>YOU</Authors>
-    <Copyright>Copyright 2019</Copyright>
+    <Owners>nmilcoff</Owners>
+    <Authors>nmilcoff</Authors>
+    <Copyright>Copyright 2020</Copyright>
 
     <!--When built in 2019 will remove extra references on pack-->
     <DisableExtraReferences>true</DisableExtraReferences>
@@ -85,6 +85,7 @@
   <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
     <Compile Include="**\*.apple.cs" />
     <ProjectReference Include="..\BindingLibraries\IOSSecuritySuite\IOSSecuritySuite.csproj" />
+    <PackageReference Include="Xamarin.iOS.SwiftRuntimeSupport" Version="0.2.0" />
   </ItemGroup>
  
   <!--Additional item groups-->
@@ -116,5 +117,5 @@
   <ItemGroup Condition=" $(TargetFramework.StartsWith('net45')) ">
     <Compile Include="**\*.dotnet.cs" />
   </ItemGroup>
-  -->
+  -->  
 </Project>
