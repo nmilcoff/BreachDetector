@@ -79,7 +79,7 @@
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
     <Compile Include="**\*.android.cs" />
-    <ProjectReference Include="..\BindingLibraries\RootBeer\RootBeer.csproj" />
+    <PackageReference Include="RootBeer" Version="0.0.8.2" />
   </ItemGroup>
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
