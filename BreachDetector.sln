@@ -3,12 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BreachDetector", "BreachDetector\BreachDetector.csproj", "{F977F473-7752-4D11-82B8-D416DCD5FBB9}"
-	ProjectSection(ProjectDependencies) = postProject
-		{883E9DAA-63F6-479A-B3D2-3E067D4F7D40} = {883E9DAA-63F6-479A-B3D2-3E067D4F7D40}
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOSSecuritySuite", "BindingLibraries\IOSSecuritySuite\IOSSecuritySuite.csproj", "{883E9DAA-63F6-479A-B3D2-3E067D4F7D40}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BreachDetector", "BreachDetector\BreachDetector.csproj", "{F977F473-7752-4D11-82B8-D416DCD5FBB9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{F0534595-FE95-4653-9B05-C7E2E8FE6C22}"
 EndProject
@@ -60,30 +55,6 @@ Global
 		{F977F473-7752-4D11-82B8-D416DCD5FBB9}.Release|x64.Build.0 = Release|Any CPU
 		{F977F473-7752-4D11-82B8-D416DCD5FBB9}.Release|x86.ActiveCfg = Release|Any CPU
 		{F977F473-7752-4D11-82B8-D416DCD5FBB9}.Release|x86.Build.0 = Release|Any CPU
-		{883E9DAA-63F6-479A-B3D2-3E067D4F7D40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{883E9DAA-63F6-479A-B3D2-3E067D4F7D40}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{883E9DAA-63F6-479A-B3D2-3E067D4F7D40}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{883E9DAA-63F6-479A-B3D2-3E067D4F7D40}.Debug|ARM.Build.0 = Debug|Any CPU
-		{883E9DAA-63F6-479A-B3D2-3E067D4F7D40}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{883E9DAA-63F6-479A-B3D2-3E067D4F7D40}.Debug|iPhone.Build.0 = Debug|Any CPU
-		{883E9DAA-63F6-479A-B3D2-3E067D4F7D40}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{883E9DAA-63F6-479A-B3D2-3E067D4F7D40}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
-		{883E9DAA-63F6-479A-B3D2-3E067D4F7D40}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{883E9DAA-63F6-479A-B3D2-3E067D4F7D40}.Debug|x64.Build.0 = Debug|Any CPU
-		{883E9DAA-63F6-479A-B3D2-3E067D4F7D40}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{883E9DAA-63F6-479A-B3D2-3E067D4F7D40}.Debug|x86.Build.0 = Debug|Any CPU
-		{883E9DAA-63F6-479A-B3D2-3E067D4F7D40}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{883E9DAA-63F6-479A-B3D2-3E067D4F7D40}.Release|Any CPU.Build.0 = Release|Any CPU
-		{883E9DAA-63F6-479A-B3D2-3E067D4F7D40}.Release|ARM.ActiveCfg = Release|Any CPU
-		{883E9DAA-63F6-479A-B3D2-3E067D4F7D40}.Release|ARM.Build.0 = Release|Any CPU
-		{883E9DAA-63F6-479A-B3D2-3E067D4F7D40}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{883E9DAA-63F6-479A-B3D2-3E067D4F7D40}.Release|iPhone.Build.0 = Release|Any CPU
-		{883E9DAA-63F6-479A-B3D2-3E067D4F7D40}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{883E9DAA-63F6-479A-B3D2-3E067D4F7D40}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
-		{883E9DAA-63F6-479A-B3D2-3E067D4F7D40}.Release|x64.ActiveCfg = Release|Any CPU
-		{883E9DAA-63F6-479A-B3D2-3E067D4F7D40}.Release|x64.Build.0 = Release|Any CPU
-		{883E9DAA-63F6-479A-B3D2-3E067D4F7D40}.Release|x86.ActiveCfg = Release|Any CPU
-		{883E9DAA-63F6-479A-B3D2-3E067D4F7D40}.Release|x86.Build.0 = Release|Any CPU
 		{92085CB7-9986-44AD-B670-3255B8121993}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{92085CB7-9986-44AD-B670-3255B8121993}.Debug|ARM.ActiveCfg = Debug|ARM
 		{92085CB7-9986-44AD-B670-3255B8121993}.Debug|ARM.Build.0 = Debug|ARM
