@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using Foundation;
 
@@ -20,18 +21,15 @@ namespace Plugin.BreachDetector
         {
             try
             {
-                var file = NSData.FromFile(NSBundle.MainBundle.PathForResource("embedded", "mobileprovision"));
                 // If file doesn't exist, the installation is from AppStore
-                if (file == null)
-                {
-                    return true;
-                }
+                var file = NSData.FromFile(NSBundle.MainBundle.PathForResource("embedded", "mobileprovision"));
+                return file == null;
             }
-            catch
+            catch(Exception ex)
             {
+                Debug.WriteLine($"Unable to get iOS installation source {ex.Message}");
+                return false;
             }
-
-            return false;
         }
 
         public bool? IsRooted()

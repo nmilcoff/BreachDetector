@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
+using Windows.Security.ExchangeActiveSyncProvisioning;
 
 namespace Plugin.BreachDetector
 {
@@ -11,22 +13,34 @@ namespace Plugin.BreachDetector
     {
         public bool? IsRooted()
         {
-            throw new NotImplementedException();
+            return null;
         }
 
         public bool? IsRunningOnVirtualDevice()
         {
-            throw new NotImplementedException();
+            try
+            {
+                var deviceInfo = new EasClientDeviceInformation();
+                var systemProductName = deviceInfo.SystemProductName;
+                
+                return systemProductName.Contains("Virtual") || systemProductName == "HMV domU"; 
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Unable to get UWP Device type {ex.Message}");
+                return null;
+            }
         }
 
         public bool? InDebugMode()
         {
-            throw new NotImplementedException();
+            return System.Diagnostics.Debugger.IsAttached;
         }
 
         public bool? InstalledFromStore()
         {
-            throw new NotImplementedException();
+            // shame there isn't a way even to detect if the app is sideloaded :(
+            return null;
         }
     }
 }
