@@ -1,7 +1,7 @@
 # BreachDetector
 
 [![Build status](https://dev.azure.com/nicolasmilcoff/BreachDetector/_apis/build/status/nmilcoff.BreachDetector)](https://dev.azure.com/nicolasmilcoff/BreachDetector/_build/latest?definitionId=2)
-[![NuGet](https://img.shields.io/nuget/v/BreachDetector.svg?label=NuGet)](https://www.nuget.org/packages/BreachDetector)
+[![NuGet](https://img.shields.io/nuget/v/Plugin.BreachDetector.svg?label=NuGet)](https://www.nuget.org/packages/Plugin.BreachDetector/)
 
 
 ## :wrench: Setup
@@ -52,6 +52,7 @@ Note: For a method that returns `bool?`, you can expect the result to be null if
 - Security is a cat and mouse game. Please be aware this library will try its best, but it might be defeated.
 - If possible, use AOT for your Xamarin.Android app (enabled by default in Xamarin.iOS, requires Enterprise license for Xamarin.Android). When using AOT, your IL code will be compiled into native instructions (x86, ARM instructions) and your code will be more difficult to reverse engineer.
 - Be aware ProGuard will only shrink the code of your Xamarin.Android app, obfuscation only works on the Java end. 
+- Don't hardcode any of your keys in your mobile apps, those are really easy to spot using simple tools. In most cases you can serve them from your API.
 - To learn more about mobile security, I would highly recommend you start with the [OWASP Mobile Application Security Verification Standard](https://github.com/OWASP/owasp-masvs) .
 
 
