@@ -45,6 +45,8 @@ var inDebug = CrossBreachDetector.Current.InDebugMode();
 var fromStore = CrossBreachDetector.Current.InstalledFromStore(); 
 ```
 
+Note: For a method that returns `bool?`, you can expect the result to be null if the platform that is running doesn't have an appropiate representation (example: `IsRooted` will return `null` for UWP).
+
 ## :lock: Security considerations
 - The approach of this library is to rely on "traditional" iOS/Android libraries as much as possible. The reason is simply that the size of those communities is bigger compared to Xamarin.
 - Security is a cat and mouse game. Please be aware this library will try its best, but it might be defeated.
