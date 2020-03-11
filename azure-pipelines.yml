@@ -1,0 +1,57 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+  branches:
+    include:
+    - master
+  paths:
+    exclude:
+    - 'README.md'
+    - '**/*.md'
+
+pr:
+  branches:
+    include:
+    - master
+  paths:
+    exclude:
+    - 'README.md'
+    - '**/*.md'
+ 
+pool:
+  name: Azure Pipelines
+  demands: msbuild
+  vmImage: windows-latest
+
+name: 0.1.0$(rev:.r)
+
+steps:
+- task: NuGetToolInstaller@1
+  displayName: 'Use NuGet '
+
+- task: NuGetCommand@2
+  displayName: 'NuGet restore'
+  inputs:
+    restoreSolution: BreachDetector/BreachDetector.csproj
+
+- task: MSBuild@1
+  displayName: 'Build project BreachDetector/BreachDetector.csproj'
+  inputs:
+    solution: BreachDetector/BreachDetector.csproj
+    configuration: Release
+    msbuildArguments: '/t:restore;build;pack /p:PackageVersion=$(Build.BuildNumber) /p:PackageOutputPath=$(build.artifactstagingdirectory)/public  /p:AssemblyFileVersion=$(Build.BuildNumber) '
+
+- task: CopyFiles@2
+  displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
+  inputs:
+    SourceFolder: '$(build.sourcesdirectory)'
+    Contents: '**\bin\Release\**\*.nupkg'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: drop'
+  inputs:
+    PathtoPublish: '$(build.artifactstagingdirectory)'
