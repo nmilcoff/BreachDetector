@@ -58,7 +58,7 @@ Note: For a method that returns `bool?`, you can expect the result to be null if
 
 ## :construction_worker: Contributions
 
-Yes, please! [Issues](https://github.com/nmilcoff/BreachDetector/issues) are open and PRs are very much welcome.
+Yes, please! [Issues](https://github.com/nmilcoff/BreachDetector/issues) are open for bugs/ideas and PRs are also welcome.
 
 ## :bow: Acknowledgements
 - Many iOS features are implemented through a binding library of [IOSSecuritySuite](https://github.com/nmilcoff/IOSSecuritySuite) (MIT)
