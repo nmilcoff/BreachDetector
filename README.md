@@ -1,5 +1,9 @@
 # BreachDetector
 
+[![Build status](https://dev.azure.com/nicolasmilcoff/BreachDetector/_apis/build/status/nmilcoff.BreachDetector)](https://dev.azure.com/nicolasmilcoff/BreachDetector/_build/latest?definitionId=2)
+[![NuGet](https://img.shields.io/nuget/v/BreachDetector.svg?label=NuGet)](https://www.nuget.org/packages/BreachDetector)
+
+
 ## :wrench: Setup
 
 Grab the latest NuGet package and install in your solution:
@@ -30,12 +34,6 @@ In your iOS app, update the Info.plist and add the following URLs (those are que
 - Emulator/simulator detection
 - Store installation detection
 
-## :lock: Security considerations
-
-- If possiblee, use AOT for your Xamarin.Android app (enabled by default in Xamarin.iOS, requires Enterprise license for Xamarin.Android). When using AOT, your IL code will be compiled into native instructions (x86, ARM instructions).
-- Be aware Proguard will only shrink the code of your Xamarin.Android app, obfuscation only works on the Java end. 
-- To learn more about mobile security, I would highly recommend you start with the [OWASP Mobile Application Security Verification Standard](https://github.com/OWASP/owasp-masvs) .
-
 ## :bulb: Examples
 
 ```c#
@@ -46,6 +44,14 @@ var isVirtualDevice = CrossBreachDetector.Current.IsRunningOnVirtualDevice();
 var inDebug = CrossBreachDetector.Current.InDebugMode();
 var fromStore = CrossBreachDetector.Current.InstalledFromStore(); 
 ```
+
+## :lock: Security considerations
+- The approach of this library is to rely on "traditional" iOS/Android libraries as much as possible. The reason is simply that the size of those communities is bigger compared to Xamarin.
+- Security is a cat and mouse game. Please be aware this library will try its best, but it might be defeated.
+- If possible, use AOT for your Xamarin.Android app (enabled by default in Xamarin.iOS, requires Enterprise license for Xamarin.Android). When using AOT, your IL code will be compiled into native instructions (x86, ARM instructions) and your code will be more difficult to reverse engineer.
+- Be aware ProGuard will only shrink the code of your Xamarin.Android app, obfuscation only works on the Java end. 
+- To learn more about mobile security, I would highly recommend you start with the [OWASP Mobile Application Security Verification Standard](https://github.com/OWASP/owasp-masvs) .
+
 
 ## :construction_worker: Contributions
 
