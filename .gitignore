@@ -430,3 +430,5 @@ DerivedData/
 
 ## Gcc Patch
 /*.gcno
+
+Resource.designer.cs
