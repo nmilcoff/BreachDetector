@@ -26,7 +26,7 @@ pool:
   demands: msbuild
   vmImage: windows-latest
 
-name: 1.0.0
+name: 1.0.1
 
 steps:
 - task: NuGetToolInstaller@1

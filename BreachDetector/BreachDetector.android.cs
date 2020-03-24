@@ -3,6 +3,8 @@ using Android.App;
 using Android.Content.PM;
 using Android.OS;
 using Com.Scottyab.Rootbeer;
+using Diff.Strazzere.Anti.Debugger;
+using Diff.Strazzere.Anti.Emulator;
 
 namespace Plugin.BreachDetector
 {
@@ -20,10 +22,20 @@ namespace Plugin.BreachDetector
         };
 
         public bool? InDebugMode()
-        {
-            return Application.Context.ApplicationInfo.Flags.HasFlag(ApplicationInfoFlags.Debuggable)
-                || System.Diagnostics.Debugger.IsAttached
-                || Debug.IsDebuggerConnected;
+        { 
+            bool tracer = false;
+            try
+            {
+                tracer = FindDebugger.HasTracerPid;
+            }
+            catch 
+            {
+            }
+
+            return Debug.IsDebuggerConnected
+                    || tracer
+                    || Application.Context.ApplicationInfo.Flags.HasFlag(ApplicationInfoFlags.Debuggable)
+                    || System.Diagnostics.Debugger.IsAttached;
         }
 
         public bool? InstalledFromStore()
@@ -35,15 +47,21 @@ namespace Plugin.BreachDetector
 
         public bool? IsRooted()
         {
-            RootBeer rootBeer = new RootBeer(Application.Context);
+            var rootBeer = new RootBeer(Application.Context);
             
             return rootBeer.IsRooted;
         }
 
-        // reference: https://github.com/flutter/plugins/blob/master/packages/device_info/android/src/main/java/io/flutter/plugins/deviceinfo/MethodCallHandlerImpl.java#L97
+        // reference: Anti-Emulator + https://github.com/flutter/plugins/blob/master/packages/device_info/android/src/main/java/io/flutter/plugins/deviceinfo/MethodCallHandlerImpl.java#L97
         public bool? IsRunningOnVirtualDevice()
         {
-            return (Build.Brand.StartsWith("generic") && Build.Device.StartsWith("generic"))
+            return FindEmulator.HasEmulatorBuild(Application.Context)
+                    || FindEmulator.HasPipes
+                    || FindEmulator.HasQEmuDrivers
+                    || FindEmulator.HasEmulatorAdb
+                    || FindEmulator.HasQEmuFiles
+                    || FindEmulator.HasGenyFiles
+                    || (Build.Brand.StartsWith("generic") && Build.Device.StartsWith("generic"))
                     || Build.Fingerprint.StartsWith("generic")
                     || Build.Fingerprint.StartsWith("unknown")
                     || Build.Hardware.Contains("goldfish")
