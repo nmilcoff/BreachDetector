@@ -33,13 +33,13 @@
     <PackageLicenseUrl>https://github.com/nmilcoff/BreachDetector/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/nmilcoff/BreachDetector</PackageProjectUrl>
     <RepositoryUrl>https://github.com/nmilcoff/BreachDetector</RepositoryUrl>
-    <PackageReleaseNotes>RELEASE NOTES</PackageReleaseNotes>
+    <PackageReleaseNotes></PackageReleaseNotes>
     <PackageIconUrl>ICON URL</PackageIconUrl>
-    <PackageTags>xamarin, windows, ios, android, xamarin.forms, plugin, BreachDetector</PackageTags>
+    <PackageTags>xamarin, windows, ios, android, xamarin.forms, plugin, security, BreachDetector</PackageTags>
     
     <Title>BreachDetector Plugin for Xamarin and Windows</Title>
-    <Summary>Summary of nuget</Summary>
-    <Description>Plugin Description</Description>
+    <Summary>Detect root, emulation, debug mode and other security concerns in your Xamarin apps</Summary>
+    <Description>This library contains a collection of good practices for detecting different kind of security breaches.</Description>
     
     
     <Owners>nmilcoff</Owners>
