@@ -23,9 +23,9 @@ In your iOS app, update the Info.plist and add the following URLs (those are que
 ``` 
 
 ## :iphone: Platforms supported
-- iOS 10+
-- Android API +14
-- UWP Build 10240+
+- iOS +10
+- Android API +21
+- UWP Build +10240
 
 ## :key: Key features 
 
@@ -61,8 +61,8 @@ Note: For a method that returns `bool?`, you can expect the result to be null if
 Yes, please! [Issues](https://github.com/nmilcoff/BreachDetector/issues) are open for bugs/ideas and PRs are also welcome.
 
 ## :bow: Acknowledgements
-- Many iOS features are implemented through a binding library of [IOSSecuritySuite](https://github.com/nmilcoff/IOSSecuritySuite) (MIT)
-- Root detection on Android is implemented through a binding library of [rootbeer](https://github.com/nmilcoff/rootbeer) (MIT)
+- Many iOS features are implemented through a binding library for [IOSSecuritySuite](https://github.com/nmilcoff/IOSSecuritySuite) (MIT)
+- Root detection on Android is implemented through a binding libraries for [rootbeer](https://github.com/nmilcoff/rootbeer) (MIT) and [Anti-Emulator](https://github.com/nmilcoff/anti-emulator) (Apache-2.0)
 
 ## :scroll: License
 
