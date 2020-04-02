@@ -62,7 +62,7 @@ Yes, please! [Issues](https://github.com/nmilcoff/BreachDetector/issues) are ope
 
 ## :bow: Acknowledgements
 - Many iOS features are implemented through a binding library for [IOSSecuritySuite](https://github.com/nmilcoff/IOSSecuritySuite) (MIT)
-- Root detection on Android is implemented through a binding libraries for [rootbeer](https://github.com/nmilcoff/rootbeer) (MIT) and [Anti-Emulator](https://github.com/nmilcoff/anti-emulator) (Apache-2.0)
+- Root detection on Android is implemented through binding libraries for [rootbeer](https://github.com/nmilcoff/rootbeer) (MIT) and [Anti-Emulator](https://github.com/nmilcoff/anti-emulator) (Apache-2.0)
 
 ## :scroll: License
 
