@@ -8,7 +8,7 @@
 
 Grab the latest NuGet package and install in your solution:
 
-    Install-Package BreachDetector
+    Install-Package Plugin.BreachDetector
 
 In your iOS app, update the Info.plist and add the following URLs (those are queried as part of detecting jailbreak):
 
