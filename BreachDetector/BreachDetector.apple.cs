@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Text;
 using Foundation;
+using LocalAuthentication;
 
 namespace Plugin.BreachDetector
 {
@@ -40,6 +39,27 @@ namespace Plugin.BreachDetector
         public bool? IsRunningOnVirtualDevice()
         {
             return Securing.IOSSecuritySuite.AmIRunInEmulator();
+        }
+
+        public DeviceSecurityLockScreenType GetDeviceLocalSecurityType()
+        {
+            try
+            {
+                var laContext = new LAContext();
+
+                if (laContext.CanEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, out NSError error) && error == null)
+                    return DeviceSecurityLockScreenType.Biometric;
+
+                if (laContext.CanEvaluatePolicy(LAPolicy.DeviceOwnerAuthentication, out NSError error2) && error2 == null)
+                    return DeviceSecurityLockScreenType.Pass;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"LAContext error: {ex.Message}. StackTrace: {ex.StackTrace}");
+                return DeviceSecurityLockScreenType.Unknown;
+            }
+
+            return DeviceSecurityLockScreenType.None;
         }
     }
 }

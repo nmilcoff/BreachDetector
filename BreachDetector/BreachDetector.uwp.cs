@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Text;
 using Windows.Security.ExchangeActiveSyncProvisioning;
 
 namespace Plugin.BreachDetector
@@ -41,6 +39,11 @@ namespace Plugin.BreachDetector
         {
             // shame there isn't a way even to detect if the app is sideloaded :(
             return null;
+        }
+
+        public DeviceSecurityLockScreenType GetDeviceLocalSecurityType()
+        {
+            return DeviceSecurityLockScreenType.Unknown;
         }
     }
 }

@@ -22,9 +22,16 @@ In your iOS app, update the Info.plist and add the following URLs (those are que
 </array>
 ``` 
 
+Additionally, if you want to use `GetDeviceLocalSecurityType()` method on iOS, you need to add an additional key to the Info.plist:
+
+```xml
+<key>NSFaceIDUsageDescription</key>
+<string>Use a nice explanation here</string>
+```
+
 ## :iphone: Platforms supported
 - iOS 10+
-- Android API +14
+- Android API +16
 - UWP Build 10240+
 
 ## :key: Key features 
@@ -33,6 +40,7 @@ In your iOS app, update the Info.plist and add the following URLs (those are que
 - Debug mode detection
 - Emulator/simulator detection
 - Store installation detection
+- Device local authentication method detection
 
 ## :bulb: Examples
 
@@ -43,6 +51,7 @@ var isRootOrJailbreak = CrossBreachDetector.Current.IsRooted();
 var isVirtualDevice = CrossBreachDetector.Current.IsRunningOnVirtualDevice();
 var inDebug = CrossBreachDetector.Current.InDebugMode();
 var fromStore = CrossBreachDetector.Current.InstalledFromStore(); 
+var localAuthentication = CrossBreachDetector.Current.GetDeviceLocalSecurityType(); // values: Unknown, None, Pass, Biometric
 ```
 
 Note: For a method that returns `bool?`, you can expect the result to be null if the platform that is running doesn't have an appropiate representation (example: `IsRooted` will return `null` for UWP).
