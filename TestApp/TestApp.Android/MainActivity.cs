@@ -16,13 +16,19 @@ namespace TestApp.Droid
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
-
+            
             base.OnCreate(savedInstanceState);
+
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
+
+            // SET THIS FLAG TO PREVENT SCREENSHOTS AND TO DISPLAY A WHITE FRAME WHEN THE APP IS IN BACKGROUND
+            // BE AWARE THERE ARE SOME INTERESTING LIMITATIONS: https://commonsware.com/blog/2016/06/06/psa-flag-secure-window-leaks.html
+            Window.SetFlags(WindowManagerFlags.Secure, WindowManagerFlags.Secure);
         }
+
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
