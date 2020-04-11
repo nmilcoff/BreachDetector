@@ -43,6 +43,13 @@ namespace TestApp.ViewModels
             set { SetProperty(ref _store, value); }
         }
 
+        string _lockScreen = string.Empty;
+        public string LockScreen
+        {
+            get { return _lockScreen; }
+            set { SetProperty(ref _lockScreen, value); }
+        }
+
         void ExecuteChecks()
         {
             if (IsBusy)
@@ -51,7 +58,8 @@ namespace TestApp.ViewModels
             Root = CrossBreachDetector.Current.IsRooted();
             VirtualDevice = CrossBreachDetector.Current.IsRunningOnVirtualDevice();
             Debug = CrossBreachDetector.Current.InDebugMode();
-            Store = CrossBreachDetector.Current.InstalledFromStore(); 
+            Store = CrossBreachDetector.Current.InstalledFromStore();
+            LockScreen = CrossBreachDetector.Current.GetDeviceLocalSecurityType().ToString();
         }
     }
 }
