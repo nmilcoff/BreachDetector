@@ -15,28 +15,28 @@ namespace TestApp.ViewModels
             ExecuteChecksCommand = new Command(() => ExecuteChecks()); 
         }
 
-        bool? _root = false;
+        bool? _root;
         public bool? Root
         {
             get { return _root; }
             set { SetProperty(ref _root, value); }
         }
 
-        bool? _virtualDevice = false;
+        bool? _virtualDevice;
         public bool? VirtualDevice
         {
             get { return _virtualDevice; }
             set { SetProperty(ref _virtualDevice, value); }
         }
 
-        bool? _debug = false;
+        bool? _debug;
         public bool? Debug
         {
             get { return _debug; }
             set { SetProperty(ref _debug, value); }
         }
 
-        bool? _store = false;
+        bool? _store;
         public bool? Store
         {
             get { return _store; }
