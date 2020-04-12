@@ -14,9 +14,9 @@
     <PackageId>Plugin.BreachDetector</PackageId>
     
     <Product>$(AssemblyName) ($(TargetFramework))</Product>
-    <AssemblyVersion>1.0.1</AssemblyVersion>
-    <AssemblyFileVersion>1.0.1</AssemblyFileVersion>
-    <Version>1.0.1</Version>
+    <AssemblyVersion>1.1.0</AssemblyVersion>
+    <AssemblyFileVersion>1.1.0</AssemblyFileVersion>
+    <Version>1.1.0</Version>
     <PackageVersion>1.1.0</PackageVersion>
     <PackOnBuild>true</PackOnBuild>
     <NeutralLanguage>en</NeutralLanguage>
