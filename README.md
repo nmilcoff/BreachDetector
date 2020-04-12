@@ -8,7 +8,7 @@
 
 Grab the latest NuGet package and install in your solution:
 
-    Install-Package BreachDetector
+    Install-Package Plugin.BreachDetector
 
 In your iOS app, update the Info.plist and add the following URLs (those are queried as part of detecting jailbreak):
 
@@ -31,9 +31,9 @@ Additionally, if you want to use `GetDeviceLocalSecurityType()` method on iOS, y
 
 ## :iphone: Platforms supported
 
-- iOS 10+
+- iOS +10
 - Android API +21
-- UWP Build 10240+
+- UWP Build +10240
 
 ## :key: Key features 
 
@@ -89,8 +89,8 @@ Yes, please! [Issues](https://github.com/nmilcoff/BreachDetector/issues) are ope
 
 ## :bow: Acknowledgements
 
-- Many iOS features are implemented through a binding library of [IOSSecuritySuite](https://github.com/nmilcoff/IOSSecuritySuite) (MIT)
-- Root detection on Android is implemented through a binding library of [rootbeer](https://github.com/nmilcoff/rootbeer) (MIT)
+- Many iOS features are implemented through a binding library for [IOSSecuritySuite](https://github.com/nmilcoff/IOSSecuritySuite) (MIT)
+- Root detection on Android is implemented through binding libraries for [rootbeer](https://github.com/nmilcoff/rootbeer) (MIT) and [Anti-Emulator](https://github.com/nmilcoff/anti-emulator) (Apache-2.0)
 
 ## :scroll: License
 
