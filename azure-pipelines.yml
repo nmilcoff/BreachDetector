@@ -16,6 +16,7 @@ pr:
   branches:
     include:
     - master
+    - develop
   paths:
     exclude:
     - 'README.md'
@@ -26,7 +27,7 @@ pool:
   demands: msbuild
   vmImage: windows-latest
 
-name: 1.0.1
+name: 1.1.0
 
 steps:
 - task: NuGetToolInstaller@1

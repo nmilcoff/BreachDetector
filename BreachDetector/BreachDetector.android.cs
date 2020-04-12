@@ -1,7 +1,10 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq; 
 using Android.App;
+using Android.Content;
 using Android.Content.PM;
 using Android.OS;
+using AndroidX.Biometric;
 using Com.Scottyab.Rootbeer;
 using Diff.Strazzere.Anti.Debugger;
 using Diff.Strazzere.Anti.Emulator;
@@ -77,6 +80,34 @@ namespace Plugin.BreachDetector
                     || Build.Product.Contains("vbox86p")
                     || Build.Product.Contains("emulator")
                     || Build.Product.Contains("simulator");
+        }
+
+        public DeviceSecurityLockScreenType GetDeviceLocalSecurityType()
+        {
+            try
+            {
+                var context = Application.Context;
+
+                var keyguardManager = (KeyguardManager)Application.Context.GetSystemService(Context.KeyguardService);
+
+                // first check for IsKeyguardSecure, if it's false then lock screen security is disabled
+                if (!keyguardManager.IsKeyguardSecure)
+                    return DeviceSecurityLockScreenType.None;
+
+                var manager = BiometricManager.From(Application.Context);
+                var result = manager.CanAuthenticate();
+                if (result == BiometricManager.BiometricSuccess)
+                    return DeviceSecurityLockScreenType.Biometric;
+
+
+                // at this point keyguardManager.IsKeyguardSecure = true, so at least pass is enabled
+                return DeviceSecurityLockScreenType.Pass;
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Biometric check error: {ex.Message}. StackTrace: {ex.StackTrace}");
+                return DeviceSecurityLockScreenType.Unknown;
+            } 
         }
     }
 }

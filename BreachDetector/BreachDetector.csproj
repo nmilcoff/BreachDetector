@@ -14,10 +14,10 @@
     <PackageId>Plugin.BreachDetector</PackageId>
     
     <Product>$(AssemblyName) ($(TargetFramework))</Product>
-    <AssemblyVersion>1.0.1</AssemblyVersion>
-    <AssemblyFileVersion>1.0.1</AssemblyFileVersion>
-    <Version>1.0.1</Version>
-    <PackageVersion>1.0.1</PackageVersion>
+    <AssemblyVersion>1.1.0</AssemblyVersion>
+    <AssemblyFileVersion>1.1.0</AssemblyFileVersion>
+    <Version>1.1.0</Version>
+    <PackageVersion>1.1.0</PackageVersion>
     <PackOnBuild>true</PackOnBuild>
     <NeutralLanguage>en</NeutralLanguage>
     <LangVersion>default</LangVersion>
@@ -80,6 +80,7 @@
     <Compile Include="**\*.android.cs" />
     <PackageReference Include="RootBeer" Version="0.0.8.2" />
     <PackageReference Include="AntiEmulator" Version="1.0.0" />
+    <PackageReference Include="Xamarin.AndroidX.Biometric" Version="1.0.1" />
   </ItemGroup>
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">

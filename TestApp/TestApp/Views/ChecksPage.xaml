@@ -55,6 +55,17 @@
             LineBreakMode="NoWrap" 
             Style="{DynamicResource ListItemTextStyle}" 
             FontSize="16" />
+
+        <Label Grid.Row="4" Grid.Column="0"
+            Text="LockScreen:" 
+            LineBreakMode="NoWrap" 
+            Style="{DynamicResource ListItemTextStyle}" 
+            FontSize="16" />
+        <Label Grid.Row="4" Grid.Column="1"
+            Text="{Binding LockScreen}" 
+            LineBreakMode="NoWrap" 
+            Style="{DynamicResource ListItemTextStyle}" 
+            FontSize="16" />
     </Grid>
 
 </ContentPage>
