@@ -32,7 +32,7 @@ Additionally, if you want to use `GetDeviceLocalSecurityType()` method on iOS, y
 ## :iphone: Platforms supported
 
 - iOS 10+
-- Android API +16
+- Android API +21
 - UWP Build 10240+
 
 ## :key: Key features 
@@ -78,6 +78,10 @@ The sample app in this repository also contains some good practices implementati
 
 - On Android you can set the `Secure` flags for the Window, [here](https://github.com/nmilcoff/BreachDetector/blob/develop/TestApp/TestApp.Android/MainActivity.cs#L29) is an example. This will hide the content of the UI when the app is in background and also prevent the user from taking screenshots. Please be aware though the scope has [some limitations](https://github.com/commonsguy/cwac-security/blob/master/docs/FLAGSECURE.md) related to child windows.
 - On iOS you can use the AppDelegate lifecycle methods to add / remove an image on top of your UI to hide the content (also note that on iOS you can't prevent the user from taking screenshots). [Here](https://github.com/nmilcoff/BreachDetector/blob/develop/TestApp/TestApp.iOS/AppDelegate.cs#L20) is an example for this implementation.
+
+#### Auto-logout due to user inactivity
+
+The sample app in this repository has [this mechanism](https://stackoverflow.com/a/51727021/5000213) implemented. You can see it [here](https://github.com/nmilcoff/BreachDetector/blob/test-app/TestApp/TestApp/App.xaml.cs#L26).
 
 ## :construction_worker: Contributions
 
