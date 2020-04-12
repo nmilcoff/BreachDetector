@@ -21,7 +21,10 @@ namespace TestApp
                 MainPage = new PleaseUpdateAppPage();
             }
             else
-            {
+            { 
+                SessionManager.Instance.OnSessionExpired = HandleSessionExpired; 
+                SessionManager.Instance.StartTrackSessionAsync();
+
                 MainPage = new ChecksPage();
             }
         }
@@ -32,6 +35,12 @@ namespace TestApp
 
         protected override void OnResume()
         {
+        }
+
+        private async void HandleSessionExpired(object sender, EventArgs e)
+        {
+            // Log the user out
+            SessionManager.Instance.EndTrackSession();
         }
     }
 }

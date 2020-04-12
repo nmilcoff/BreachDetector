@@ -14,7 +14,18 @@ namespace TestApp.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
-            return base.FinishedLaunching(app, options);
+
+            var allGesturesRecognizer = new AllGesturesRecognizer(delegate
+            {
+                SessionManager.Instance.ExtendSession();
+            });
+
+
+            var result = base.FinishedLaunching(app, options);
+
+            this.Window.AddGestureRecognizer(allGesturesRecognizer);
+
+            return result;
         }
 
         // Use this to display a white frame when the app is in background
@@ -36,5 +47,26 @@ namespace TestApp.iOS
             view?.RemoveFromSuperview();
             base.OnActivated(uiApplication);
         }
-    }
+
+        class AllGesturesRecognizer : UIGestureRecognizer
+        {
+            public delegate void OnTouchesEnded();
+
+            private OnTouchesEnded touchesEndedDelegate;
+
+            public AllGesturesRecognizer(OnTouchesEnded touchesEnded)
+            {
+                this.touchesEndedDelegate = touchesEnded;
+            }
+
+            public override void TouchesEnded(NSSet touches, UIEvent evt)
+            {
+                this.State = UIGestureRecognizerState.Failed;
+
+                this.touchesEndedDelegate();
+
+                base.TouchesEnded(touches, evt);
+            }
+        }
+    } 
 }

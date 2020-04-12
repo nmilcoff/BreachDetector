@@ -40,5 +40,12 @@ namespace TestApp.Droid
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+
+        public override void OnUserInteraction()
+        {
+            base.OnUserInteraction();
+
+            SessionManager.Instance.ExtendSession();
+        }
     }
 }
