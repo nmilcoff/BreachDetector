@@ -17,7 +17,7 @@
     <AssemblyVersion>1.0.1</AssemblyVersion>
     <AssemblyFileVersion>1.0.1</AssemblyFileVersion>
     <Version>1.0.1</Version>
-    <PackageVersion>1.0.1</PackageVersion>
+    <PackageVersion>1.1.0</PackageVersion>
     <PackOnBuild>true</PackOnBuild>
     <NeutralLanguage>en</NeutralLanguage>
     <LangVersion>default</LangVersion>
