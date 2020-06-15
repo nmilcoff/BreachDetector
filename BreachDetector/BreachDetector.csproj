@@ -79,7 +79,7 @@
   <ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
     <Compile Include="**\*.android.cs" />
     <PackageReference Include="RootBeer" Version="0.0.8.2" />
-    <PackageReference Include="AntiEmulator" Version="1.0.0" />
+    <PackageReference Include="AntiEmulator" Version="1.0.1" />
     <PackageReference Include="Xamarin.AndroidX.Biometric" Version="1.0.1" />
   </ItemGroup>
 
