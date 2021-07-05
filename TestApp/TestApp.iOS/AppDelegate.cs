@@ -9,7 +9,9 @@ namespace TestApp.iOS
 { 
     [Register("AppDelegate")]
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
-    { 
+    {
+        NSObject _screenshotNotification = null;
+
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
@@ -38,6 +40,13 @@ namespace TestApp.iOS
             };
             uiApplication.KeyWindow.AddSubview(view);
             uiApplication.KeyWindow.BringSubviewToFront(view);
+
+            // Stop observer
+            if (_screenshotNotification != null)
+            {
+                _screenshotNotification.Dispose();
+                _screenshotNotification = null;
+            }
         }
 
         // when coming back from background, make sure the white frame is removed
@@ -46,6 +55,16 @@ namespace TestApp.iOS
             var view = uiApplication.KeyWindow.ViewWithTag(new nint(101));
             view?.RemoveFromSuperview();
             base.OnActivated(uiApplication);
+
+            // Start observing screenshot notification
+            if (_screenshotNotification == null)
+            {
+                _screenshotNotification = UIApplication.Notifications.ObserveUserDidTakeScreenshot((sender, args) =>
+                {
+                    Console.WriteLine("User took screenshoot");
+                    Console.WriteLine("Notification: {0}", args.Notification);
+                });
+            }
         }
 
         class AllGesturesRecognizer : UIGestureRecognizer
